@@ -1,5 +1,5 @@
-from comet_ml import Experiment
-experiment = Experiment(project_name="soundmnist")
+# from comet_ml import Experiment
+# experiment = Experiment(project_name="soundmnist")
 
 from utils import model, wav2mfcc, get_data
 import test
@@ -13,11 +13,13 @@ X_train, X_test, y_train, y_test, cnn_model = get_data.get_all()
 
 print(cnn_model.summary())
 
-cnn_model.fit(X_train, y_train, batch_size=64, epochs=50, verbose=1, validation_split=0.1, callbacks=[keras_callback])
+cnn_model.fit(X_train, y_train, batch_size=64, epochs=5, verbose=1, validation_split=0.1, callbacks=[keras_callback])
 
 cnn_model.save('trained_model.h5')
 
 test.check_preds(X_test, y_test)
+
+
 
 ''' OUTPUT 
 
@@ -42,7 +44,7 @@ Epoch 50/50
 1024/1215 [========================>.....] - ETA: 0s - loss: 0.0300 - acc: 0.9902
 1088/1215 [=========================>....] - ETA: 0s - loss: 0.0338 - acc: 0.9890
 1152/1215 [===========================>..] - ETA: 0s - loss: 0.0331 - acc: 0.9896
-1215/1215 [==============================] - 6s 5ms/step - loss: 0.0317 - acc: 0.9901 - val_loss: 0.2954 - val_acc: 0.9185
+1215/1215 [==============================] - 6s 5ms/step - loss: 0.0317 - acc: 0.9901 - val_loss: 0.2954 - _acc: 0.9185
              precision    recall  f1-score   support
 
           0       1.00      0.84      0.91        19

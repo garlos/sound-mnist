@@ -26,8 +26,3 @@ def get_data():
             labels.append(label)
 
     return np.asarray(mfccs), to_categorical(labels)
-
-# if __name__ == '__main__':
-#     mfccs, labels = get_data()
-#     print(mfccs.shape)
-#     print(labels.shape)
