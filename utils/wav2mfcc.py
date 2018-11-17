@@ -3,6 +3,7 @@ import librosa
 import os
 from keras.utils import to_categorical
 
+
 def wav2mfcc(file_path, max_pad_len=20):
     wave, sr = librosa.load(file_path, mono=True, sr=None)
     wave = wave[::3]
@@ -11,8 +12,8 @@ def wav2mfcc(file_path, max_pad_len=20):
     mfcc = np.pad(mfcc, pad_width=((0, 0), (0, pad_width)), mode='constant')
     return mfcc
 
-def get_data():
 
+def get_data():
     labels = []
     mfccs = []
 

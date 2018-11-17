@@ -1,7 +1,7 @@
 # from comet_ml import Experiment
 # experiment = Experiment(project_name="soundmnist")
 
-from utils import model, wav2mfcc, get_data
+from utils import get_data
 import test
 
 # Tensorboard
@@ -18,7 +18,6 @@ cnn_model.fit(X_train, y_train, batch_size=64, epochs=5, verbose=1, validation_s
 cnn_model.save('trained_model.h5')
 
 test.check_preds(X_test, y_test)
-
 
 
 ''' OUTPUT 
