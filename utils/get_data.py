@@ -1,4 +1,6 @@
 import utils
+from utils import wav2mfcc
+from utils import model
 from sklearn.model_selection import train_test_split
 
 
