@@ -1,6 +1,3 @@
-# from comet_ml import Experiment
-# experiment = Experiment(project_name="soundmnist")
-
 from utils import get_data
 import test
 

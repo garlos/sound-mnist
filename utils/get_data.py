@@ -1,6 +1,7 @@
 import utils
 from sklearn.model_selection import train_test_split
 
+
 def get_all():
     mfccs, labels = utils.wav2mfcc.get_data()
 
